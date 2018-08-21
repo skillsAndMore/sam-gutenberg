@@ -34,9 +34,9 @@ export default class Edit extends Component {
             <div className={ className }>
 
                 <CheckboxControl
-                    heading={ __( 'Checkbox Control', 'jsforwpblocks' ) }
-                    label={ __( 'Check here', 'jsforwpblocks' ) }
-                    help={ __( 'Checkbox control help text', 'jsforwpblocks' ) }
+                    heading={ __( 'Checkbox Control', 'sam-gutenberg' ) }
+                    label={ __( 'Check here', 'sam-gutenberg' ) }
+                    help={ __( 'Checkbox control help text', 'sam-gutenberg' ) }
                     checked={ checkboxControl }
                     onChange={ checkboxControl => setAttributes( { checkboxControl } ) }
                 />
@@ -47,7 +47,7 @@ export default class Edit extends Component {
                 />
 
                 <RadioControl
-                    label={ __( 'Radio Control', 'jsforwpblocks' ) }
+                    label={ __( 'Radio Control', 'sam-gutenberg' ) }
                     selected={ radioControl }
                     options={ [
                         { label: 'Author', value: 'a' },
@@ -59,7 +59,7 @@ export default class Edit extends Component {
                 <RangeControl
                     beforeIcon="arrow-left-alt2"
                     afterIcon="arrow-right-alt2"
-                    label={ __( 'Range Control', 'jsforwpblocks' ) }
+                    label={ __( 'Range Control', 'sam-gutenberg' ) }
                     value={ rangeControl }
                     onChange={ rangeControl => setAttributes( { rangeControl } ) }
                     min={ 1 }
@@ -67,27 +67,27 @@ export default class Edit extends Component {
                 />
 
                 <TextControl
-                    label={ __( 'Text Control', 'jsforwpblocks' ) }
-                    help={ __( 'Text control help text', 'jsforwpblocks' ) }
+                    label={ __( 'Text Control', 'sam-gutenberg' ) }
+                    help={ __( 'Text control help text', 'sam-gutenberg' ) }
                     value={ textControl }
                     onChange={ textControl => setAttributes( { textControl } ) }
                 />
 
                 <TextareaControl
-                    label={ __( 'Text Area Control', 'jsforwpblocks' ) }
-                    help={ __( 'Text area control help text', 'jsforwpblocks' ) }
+                    label={ __( 'Text Area Control', 'sam-gutenberg' ) }
+                    help={ __( 'Text area control help text', 'sam-gutenberg' ) }
                     value={ textareaControl }
                     onChange={ textareaControl => setAttributes( { textareaControl } ) }
                 />
 
                 <ToggleControl
-                    label={ __( 'Toggle Control', 'jsforwpblocks' ) }
+                    label={ __( 'Toggle Control', 'sam-gutenberg' ) }
                     checked={ toggleControl }
                     onChange={ toggleControl => setAttributes( { toggleControl } ) }
                 />
 
                 <SelectControl
-                    label={ __( 'Select Control', 'jsforwpblocks' ) }
+                    label={ __( 'Select Control', 'sam-gutenberg' ) }
                     value={ selectControl }
                     options={ [
                         { value: 'a', label: 'Option A' },

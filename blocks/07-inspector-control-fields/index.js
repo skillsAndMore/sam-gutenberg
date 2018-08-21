@@ -32,19 +32,19 @@ function getSettings( attributes ) {
  * Register static block example block
  */
 export default registerBlockType(
-    'jsforwpblocks/inspector-control-fields',
+    'sam-gutenberg/inspector-control-fields',
     {
-        title: __( 'Example - Inspector Fields', 'jsforwpblocks' ),
-        description: __( 'An example of how to use form fields in the Inspector element.', 'jsforwpblocks'),
+        title: __( 'Example - Inspector Fields', 'sam-gutenberg' ),
+        description: __( 'An example of how to use form fields in the Inspector element.', 'sam-gutenberg'),
         category: 'common',        
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },         
         keywords: [
-            __( 'Palette', 'jsforwpblocks' ),
-            __( 'Settings', 'jsforwpblocks' ),
-            __( 'Scheme', 'jsforwpblocks' ),
+            __( 'Palette', 'sam-gutenberg' ),
+            __( 'Settings', 'sam-gutenberg' ),
+            __( 'Scheme', 'sam-gutenberg' ),
         ],
         attributes,
         getEditWrapperProps( attributes ) {

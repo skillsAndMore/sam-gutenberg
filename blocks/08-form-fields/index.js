@@ -32,19 +32,19 @@ function getSettings(attributes) {
  * Register static block example block
  */
 export default registerBlockType(
-    'jsforwpblocks/form-fields',
+    'sam-gutenberg/form-fields',
     {
-        title: __('Example - Form Fields', 'jsforwpblocks'),
-        description: __('An example of how to use form component in a block.', 'jsforwpblocks'),
+        title: __('Example - Form Fields', 'sam-gutenberg'),
+        description: __('An example of how to use form component in a block.', 'sam-gutenberg'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },
         keywords: [
-            __('Palette', 'jsforwpblocks'),
-            __('Settings', 'jsforwpblocks'),
-            __('Scheme', 'jsforwpblocks'),
+            __('Palette', 'sam-gutenberg'),
+            __('Settings', 'sam-gutenberg'),
+            __('Scheme', 'sam-gutenberg'),
         ],
         attributes,
         getEditWrapperProps(attributes) {
@@ -68,7 +68,7 @@ export default registerBlockType(
 
             return (
                 <div>
-                    <p>{__('Check the settings', 'jsforwpblocks')}</p>
+                    <p>{__('Check the settings', 'sam-gutenberg')}</p>
                     <ul>
                         {settings}
                     </ul>

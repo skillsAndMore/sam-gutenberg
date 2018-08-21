@@ -7,7 +7,7 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\register_dynamic_block' );
 /**
  * Register the dynamic block.
  *
- * @since 2.1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -19,7 +19,7 @@ function register_dynamic_block() {
 	}
 
 	// Hook server side rendering into render callback
-	register_block_type( 'jsforwpblocks/dynamic', [
+	register_block_type( 'sam-gutenberg/dynamic', [
 		'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
 	] );
 

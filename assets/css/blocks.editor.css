@@ -1,22 +1,18 @@
-.wp-block-jsforwpblocks-static .sorry.warning {
-  background: #C44D58;
-  color: white;
-  font-size: 1.2rem; }
-.editor-visual-editor .wp-block-jsforwpblocks-custom-toolbar p {
-  font-size: 1.4rem; }
-.wp-block-jsforwpblocks-media-upload .image-wrapper {
-  position: relative; }
-
-.wp-block-jsforwpblocks-media-upload button.remove-image {
-  background-color: red;
-  border: 2px red solid;
-  padding: 5px 5px 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: .9; }
-  .wp-block-jsforwpblocks-media-upload button.remove-image svg {
-    background: red;
-    fill: white; }
-  .wp-block-jsforwpblocks-media-upload button.remove-image:hover {
-    opacity: 1; }
+.wp-block-sam-alert {
+  background-color: #fff;
+  margin: 30px 0;
+  padding: 5px 18px;
+  border-top: 6px solid;
+  border-color: #2898bd;
+  font-size: 16px; }
+  .wp-block-sam-alert::before {
+    content: "INFO";
+    margin-left: -30px;
+    background-color: #2898bd;
+    color: #fff;
+    font-weight: bold;
+    float: left;
+    padding: 10px 20px;
+    margin-top: 15px; }
+  .wp-block-sam-alert .box-inside {
+    margin: 10px 2% 10px 2%; }

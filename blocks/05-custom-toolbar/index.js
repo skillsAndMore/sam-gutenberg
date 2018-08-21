@@ -30,19 +30,19 @@ const {
  * Register block
  */
 export default registerBlockType(
-    'jsforwpblocks/custom-toolbar',
+    'sam-gutenberg/custom-toolbar',
     {
-        title: __( 'Example - Custom Toolbar', 'jsforwpblocks' ),
-        description: __( 'An example of how to add a custom buttom to the block toolbar.', 'jsforwpblocks'),
+        title: __( 'Example - Custom Toolbar', 'sam-gutenberg' ),
+        description: __( 'An example of how to add a custom buttom to the block toolbar.', 'sam-gutenberg'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },                   
         keywords: [
-            __( 'Button', 'jsforwpblocks' ),
-            __( 'Settings', 'jsforwpblocks' ),
-            __( 'Controls', 'jsforwpblocks' ),
+            __( 'Button', 'sam-gutenberg' ),
+            __( 'Settings', 'sam-gutenberg' ),
+            __( 'Controls', 'sam-gutenberg' ),
         ],
         attributes: {
             alignment: {
@@ -86,7 +86,7 @@ export default registerBlockType(
                             onChange={ alignment => props.setAttributes( { alignment } ) }
                         />
                         <Toolbar>
-                            <Tooltip text={ __( 'High Contrast', 'jsforwpblocks' )  }>
+                            <Tooltip text={ __( 'High Contrast', 'sam-gutenberg' )  }>
                                 <Button
                                     className={ classnames(
                                         'components-icon-button',
@@ -103,7 +103,7 @@ export default registerBlockType(
                     <RichText
                         tagName="div"
                         multiline="p"
-                        placeholder={ __( 'Enter your message here..', 'jsforwpblocks' ) }
+                        placeholder={ __( 'Enter your message here..', 'sam-gutenberg' ) }
                         value={ message }
                         className={ classnames(
                             'message-body',

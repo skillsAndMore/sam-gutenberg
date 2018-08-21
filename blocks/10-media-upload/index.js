@@ -23,19 +23,19 @@ const {
  * Register example block
  */
 export default registerBlockType(
-    'jsforwpblocks/media-upload',
+    'sam-gutenberg/media-upload',
     {
-        title: __( 'Example - Media Upload Button', 'jsforwpblocks' ),
-        description: __( 'An example of how to use the MediaUpload component.', 'jsforwpblocks'),
+        title: __( 'Example - Media Upload Button', 'sam-gutenberg' ),
+        description: __( 'An example of how to use the MediaUpload component.', 'sam-gutenberg'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icons.upload,
         },         
         keywords: [
-            __( 'Image', 'jsforwpblocks' ),
-            __( 'MediaUpload', 'jsforwpblocks' ),
-            __( 'Message', 'jsforwpblocks' ),
+            __( 'Image', 'sam-gutenberg' ),
+            __( 'MediaUpload', 'sam-gutenberg' ),
+            __( 'Message', 'sam-gutenberg' ),
         ],
         attributes: {
             imgURL: {
@@ -86,7 +86,7 @@ export default registerBlockType(
                                     onClick={ open }
                                 >
                                     { icons.upload }
-                                    { __( ' Upload Image', 'jsforwpblocks' ) }
+                                    { __( ' Upload Image', 'sam-gutenberg' ) }
                                 </Button>
                             ) }
                         >

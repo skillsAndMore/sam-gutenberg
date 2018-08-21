@@ -26,19 +26,19 @@ const {
  * Register example block
  */
 export default registerBlockType(
-    'jsforwpblocks/url-input-conditional',
+    'sam-gutenberg/url-input-conditional',
     {
-        title: __( 'Example - Conditional Save URL Input', 'jsforwpblocks' ),
-        description: __( 'An example of how to use a condition inside the save setting.', 'jsforwpblocks'),
+        title: __( 'Example - Conditional Save URL Input', 'sam-gutenberg' ),
+        description: __( 'An example of how to use a condition inside the save setting.', 'sam-gutenberg'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icons.conditional,
         },         
         keywords: [
-            __( 'Link', 'jsforwpblocks' ),
-            __( 'Post', 'jsforwpblocks' ),
-            __( 'Search', 'jsforwpblocks' ),
+            __( 'Link', 'sam-gutenberg' ),
+            __( 'Post', 'sam-gutenberg' ),
+            __( 'Search', 'sam-gutenberg' ),
         ],
         attributes: {
             text: {
@@ -64,11 +64,11 @@ export default registerBlockType(
                         <Fragment>
                             <TextControl
                                 id="example-input-field"
-                                label={ __( 'Link Text', 'jsforwpblocks' ) }
+                                label={ __( 'Link Text', 'sam-gutenberg' ) }
                                 value={ text }
                                 onChange={ text => setAttributes( { text } ) }
                             />
-                            <p>{ __( 'Link URL', 'jsforwpblocks' ) }</p>
+                            <p>{ __( 'Link URL', 'sam-gutenberg' ) }</p>
                             <form
                                 className="blocks-format-toolbar__link-modal-line blocks-format-toolbar__link-modal-line"
                                 onSubmit={ event => event.preventDefault() }
@@ -83,7 +83,7 @@ export default registerBlockType(
                                 />
                                 <IconButton
                                     icon="editor-break"
-                                    label={ __( 'Apply', 'jsforwpblocks' ) }
+                                    label={ __( 'Apply', 'sam-gutenberg' ) }
                                     type="submit"
                                 />
                             </form>
@@ -93,7 +93,7 @@ export default registerBlockType(
 
                         <p>
                             <a href={ url }>
-                                { text || __( 'Edit link', 'jsforwpblocks' ) }
+                                { text || __( 'Edit link', 'sam-gutenberg' ) }
                             </a>
                         </p>
 
@@ -108,7 +108,7 @@ export default registerBlockType(
             return (
                 <p>
                     { isEmpty ? (
-                        __( 'No link', 'jsforwpblocks' )
+                        __( 'No link', 'sam-gutenberg' )
                     ) : (
                         <a href={ url }>
                             { text }

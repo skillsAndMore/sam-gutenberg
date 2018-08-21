@@ -35,26 +35,26 @@ export default class Inspector extends Component {
         return (
             <InspectorControls>
                 <PanelBody
-                    title={ __( 'Panel Body Title', 'jsforwpblocks' ) }
+                    title={ __( 'Panel Body Title', 'sam-gutenberg' ) }
                     initialOpen={ false }
                 >
                     <PanelRow>
-                        <p>{ __( 'Panel Body Copy', 'jsforwpblocks' ) }</p>
+                        <p>{ __( 'Panel Body Copy', 'sam-gutenberg' ) }</p>
                     </PanelRow>
                 </PanelBody>
 
                 <PanelBody>
                     <CheckboxControl
-                        heading={ __( 'Checkbox Control', 'jsforwpblocks' ) }
-                        label={ __( 'Check here', 'jsforwpblocks' ) }
-                        help={ __( 'Checkbox control help text', 'jsforwpblocks' ) }
+                        heading={ __( 'Checkbox Control', 'sam-gutenberg' ) }
+                        label={ __( 'Check here', 'sam-gutenberg' ) }
+                        help={ __( 'Checkbox control help text', 'sam-gutenberg' ) }
                         checked={ checkboxControl }
                         onChange={ checkboxControl => setAttributes( { checkboxControl } ) }
                     />
                 </PanelBody>
 
                 <PanelColor
-                    title={ __( 'Color Panel', 'jsforwpblocks' ) }
+                    title={ __( 'Color Panel', 'sam-gutenberg' ) }
                     colorValue={ colorPaletteControl }
                 >
                     <ColorPalette
@@ -65,7 +65,7 @@ export default class Inspector extends Component {
 
                 <PanelBody>
                     <RadioControl
-                        label={ __( 'Radio Control', 'jsforwpblocks' ) }
+                        label={ __( 'Radio Control', 'sam-gutenberg' ) }
                         selected={ radioControl }
                         options={ [
                             { label: 'Author', value: 'a' },
@@ -79,7 +79,7 @@ export default class Inspector extends Component {
                     <RangeControl
                         beforeIcon="arrow-left-alt2"
                         afterIcon="arrow-right-alt2"
-                        label={ __( 'Range Control', 'jsforwpblocks' ) }
+                        label={ __( 'Range Control', 'sam-gutenberg' ) }
                         value={ rangeControl }
                         onChange={ rangeControl => setAttributes( { rangeControl } ) }
                         min={ 1 }
@@ -89,8 +89,8 @@ export default class Inspector extends Component {
 
                 <PanelBody>
                     <TextControl
-                        label={ __( 'Text Control', 'jsforwpblocks' ) }
-                        help={ __( 'Text control help text', 'jsforwpblocks' ) }
+                        label={ __( 'Text Control', 'sam-gutenberg' ) }
+                        help={ __( 'Text control help text', 'sam-gutenberg' ) }
                         value={ textControl }
                         onChange={ textControl => setAttributes( { textControl } ) }
                     />
@@ -98,8 +98,8 @@ export default class Inspector extends Component {
 
                 <PanelBody>
                     <TextareaControl
-                        label={ __( 'Text Area Control', 'jsforwpblocks' ) }
-                        help={ __( 'Text area control help text', 'jsforwpblocks' ) }
+                        label={ __( 'Text Area Control', 'sam-gutenberg' ) }
+                        help={ __( 'Text area control help text', 'sam-gutenberg' ) }
                         value={ textareaControl }
                         onChange={ textareaControl => setAttributes( { textareaControl } ) }
                     />
@@ -107,7 +107,7 @@ export default class Inspector extends Component {
 
                 <PanelBody>
                     <ToggleControl
-                        label={ __( 'Toggle Control', 'jsforwpblocks' ) }
+                        label={ __( 'Toggle Control', 'sam-gutenberg' ) }
                         checked={ toggleControl }
                         onChange={ toggleControl => setAttributes( { toggleControl } ) }
                     />
@@ -115,7 +115,7 @@ export default class Inspector extends Component {
 
                 <PanelBody>
                     <SelectControl
-                        label={ __( 'Select Control', 'jsforwpblocks' ) }
+                        label={ __( 'Select Control', 'sam-gutenberg' ) }
                         value={ selectControl }
                         options={ [
                             { value: 'a', label: 'Option A' },

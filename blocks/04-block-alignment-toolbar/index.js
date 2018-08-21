@@ -23,19 +23,19 @@ const {
   * Register block
  */
 export default registerBlockType(
-    'jsforwpblocks/block-alignment-toolbar',
+    'sam-gutenberg/block-alignment-toolbar',
     {
-        title: __( 'Example - Block Alignment Toolbar', 'jsforwpblocks' ),
-        description: __( 'How to add an alignment toolbar to a block for aligning an entire block.', 'jsforwpblocks' ),
+        title: __( 'Example - Block Alignment Toolbar', 'sam-gutenberg' ),
+        description: __( 'How to add an alignment toolbar to a block for aligning an entire block.', 'sam-gutenberg' ),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: 'align-none',
         },           
         keywords: [
-            __( 'Toolbar', 'jsforwpblocks' ),
-            __( 'Settings', 'jsforwpblocks' ),
-            __( 'Float', 'jsforwpblocks' ),
+            __( 'Toolbar', 'sam-gutenberg' ),
+            __( 'Settings', 'sam-gutenberg' ),
+            __( 'Float', 'sam-gutenberg' ),
         ],
         attributes: {
             message: {
@@ -76,7 +76,7 @@ export default registerBlockType(
                 <RichText
                     tagName="div"
                     multiline="p"
-                    placeholder={ __( 'Enter your message here..', 'jsforwpblocks' ) }
+                    placeholder={ __( 'Enter your message here..', 'sam-gutenberg' ) }
                     value={ message }
                     style={ { textAlign: textAlignment } }
                     onChange={ message => setAttributes( { message } ) }

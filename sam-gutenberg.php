@@ -8,12 +8,12 @@
  *
  * @wordpress-plugin
  * Plugin Name: SAM Gutenberg Blocks
- * Plugin URI:  https://gutenberg.courses
- * Description: A plugin containing example blocks for developers.  From <a href="https://gutenberg.courses/development">Zac Gordon's Gutenberg Development Course</a>.
- * Version:     2.1.0
- * Author:      Zac Gordon
+ * Plugin URI:  https://skillsandmore.org
+ * Description: A plugin containing blocks for SkillsAndMore.
+ * Version:     1.0.0
+ * Author:      Andrea Barghigiani
  * Author URI:  https://twitter.com/zgordon
- * Text Domain: jsforwpblocks
+ * Text Domain: sam-gutenberg
  * Domain Path: /languages
  * License:     GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,7 +28,7 @@ defined('ABSPATH') || exit;
 /**
  * Gets this plugin's absolute directory path.
  *
- * @since  2.1.0
+ * @since  1.0.0
  * @ignore
  * @access private
  *
@@ -41,7 +41,7 @@ function _get_plugin_directory() {
 /**
  * Gets this plugin's URL.
  *
- * @since  2.1.0
+ * @since  1.0.0
  * @ignore
  * @access private
  *
@@ -61,10 +61,10 @@ function _get_plugin_url() {
 include __DIR__ . '/lib/enqueue-scripts.php';
 
 // Register meta boxes
-include __DIR__ . '/lib/meta-boxes.php';
+// include __DIR__ . '/lib/meta-boxes.php';
 
 // Block Templates
-include __DIR__ . '/lib/block-templates.php';
+// include __DIR__ . '/lib/block-templates.php';
 
 // Dynamic Blocks
-include __DIR__ . '/blocks/12-dynamic/index.php';
+// include __DIR__ . '/blocks/12-dynamic/index.php';
