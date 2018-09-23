@@ -9,9 +9,9 @@ import "./editor.scss";
  * Internal block libraries
  */
 const { __ } = wp.i18n;
-const { registerBlockType, InspectorControls } = wp.blocks;
+const { registerBlockType } = wp.blocks;
 const { PanelBody, PanelRow, PanelColor } = wp.components;
-const { RichText, PlainText } = wp.editor;
+const { RichText, PlainText, InspectorControls, ColorPalette } = wp.editor;
 
 /**
  * Register block
@@ -38,11 +38,15 @@ export default registerBlockType("sam/alert", {
 		label: {
 			source: "text",
 			selector: ".label"
+		},
+		colorPaletteControl: {
+			type: "string",
+			default: "#000000"
 		}
 	},
 	edit: props => {
 		const {
-			attributes: { message, label },
+			attributes: { message, label, colorPaletteControl },
 			className,
 			setAttributes
 		} = props;
@@ -55,11 +59,17 @@ export default registerBlockType("sam/alert", {
 		return (
 			<InspectorControls>
 				<PanelColor
-					title={ __( 'Colore Principale', 'sam-gutenberg' ) }
+					title={__("Colore Principale", "sam-gutenberg")}
+					colorValue={colorPaletteControl}
 				>
-					<ColorPalette></ColorPalette>
+					<ColorPalette
+						value={colorPaletteControl}
+						onChange={colorPaletteControl =>
+							setAttributes({ colorPaletteControl })
+						}
+					/>
 				</PanelColor>
-			</InspectorControls>
+			</InspectorControls> ,
 			<div className={className}>
 				<PlainText
 					tagName="div"
@@ -72,7 +82,10 @@ export default registerBlockType("sam/alert", {
 					tagName="div"
 					className="body-message"
 					multiline="p"
-					placeholder={__("Crea il tuo avviso...", "sam-gutenberg")}
+					placeholder={__(
+						"Crea il tuo avviso...",
+						"sam-gutenberg"
+					)}
 					onChange={onChangeMessage}
 					value={message}
 				/>
