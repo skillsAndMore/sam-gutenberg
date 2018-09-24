@@ -56,20 +56,22 @@ export default registerBlockType("sam/alert", {
 		const onChangeLabel = label => {
 			setAttributes({ label });
 		};
-		return (
-			<InspectorControls>
-				<PanelColor
-					title={__("Colore Principale", "sam-gutenberg")}
-					colorValue={colorPaletteControl}
-				>
-					<ColorPalette
-						value={colorPaletteControl}
-						onChange={colorPaletteControl =>
-							setAttributes({ colorPaletteControl })
-						}
-					/>
-				</PanelColor>
-			</InspectorControls> ,
+		return [
+			<InspectorControls key="inspector">
+				<div>
+					<PanelColor
+						title={__("Colore Principale", "sam-gutenberg")}
+						colorValue={colorPaletteControl}
+					>
+						<ColorPalette
+							value={colorPaletteControl}
+							onChange={colorPaletteControl =>
+								setAttributes({ colorPaletteControl })
+							}
+						/>
+					</PanelColor>
+				</div>
+			</InspectorControls>,
 			<div className={className}>
 				<PlainText
 					tagName="div"
@@ -82,15 +84,12 @@ export default registerBlockType("sam/alert", {
 					tagName="div"
 					className="body-message"
 					multiline="p"
-					placeholder={__(
-						"Crea il tuo avviso...",
-						"sam-gutenberg"
-					)}
+					placeholder={__("Crea il tuo avviso...", "sam-gutenberg")}
 					onChange={onChangeMessage}
 					value={message}
 				/>
 			</div>
-		);
+		];
 	},
 	save: props => {
 		const {
