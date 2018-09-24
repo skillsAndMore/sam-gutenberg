@@ -57,7 +57,7 @@ export default registerBlockType("sam/alert", {
 			setAttributes({ label });
 		};
 		return [
-			<InspectorControls key="inspector">
+			<InspectorControls>
 				<div>
 					<PanelColor
 						title={__("Colore Principale", "sam-gutenberg")}
