@@ -5,7 +5,7 @@ This plugin is a WIP that aims to create a series of blocks to use inside [Skill
 We'll be happy to see you contributing in this project as well and we're going to document our experience inside our blog and a specific course!
 
 ## List of blocks
-- [x] Alert Box
+- [x] [Alert Box](#alert-box)
 - [ ] Call to Action
 - [ ] Pros & Cons
 - [ ] Pricing Table
