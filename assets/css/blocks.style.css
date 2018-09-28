@@ -1,13 +1,30 @@
-.entry-content .wp-block-sam-gutenberg-static,
-.wp-block-sam-gutenberg-static {
-  background: rgba(254, 243, 224, 0.52);
-  border: 5px #f7b733 solid;
-  padding: 1rem; }
-  .entry-content .wp-block-sam-gutenberg-static h2,
-  .wp-block-sam-gutenberg-static h2 {
-    color: #222;
-    font-size: 2rem;
-    margin: 1rem 0; }
-  .entry-content .wp-block-sam-gutenberg-static p,
-  .wp-block-sam-gutenberg-static p {
-    font-size: 1.4rem; }
+.wp-block-sam-gutenberg-alert-box {
+  border-top: 6px solid transparent;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 16px;
+  min-height: 60px; }
+  .wp-block-sam-gutenberg-alert-box .label {
+    -ms-flex: 1;
+        flex: 1;
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px 10px;
+    margin-left: -20px;
+    min-height: 30px;
+    text-align: center;
+    text-transform: uppercase; }
+  .wp-block-sam-gutenberg-alert-box .message-body {
+    -ms-flex: 3;
+        flex: 3;
+    padding: 10px 20px;
+    width: 100%; }
+    .wp-block-sam-gutenberg-alert-box .message-body p:last-child {
+      margin-bottom: 0; }
+
+body:not(.wp-admin) .wp-block-sam-gutenberg-alert-box {
+  margin: 20px 0; }

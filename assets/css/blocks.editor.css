@@ -1,8 +1,2 @@
-.wp-block-sam-alert {
-  background-color: #fff;
-  margin: 30px 0;
-  padding: 5px 18px;
-  border-top: 6px solid transparent;
-  font-size: 16px; }
-  .wp-block-sam-alert .box-inside {
-    margin: 10px 2% 10px 2%; }
+.wp-block-sam-alert .label {
+  line-height: 1; }

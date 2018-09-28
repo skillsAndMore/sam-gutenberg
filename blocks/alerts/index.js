@@ -3,32 +3,29 @@
  */
 import icon from "./icon";
 import "./style.scss";
-import "./editor.scss";
 
 /**
  * Internal block libraries
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { PanelBody, PanelRow, PanelColor } = wp.components;
-const { RichText, PlainText, InspectorControls, ColorPalette } = wp.editor;
+const { PanelColor } = wp.components;
+const { RichText, InspectorControls, ColorPalette } = wp.editor;
 
 /**
  * Register block
  */
-export default registerBlockType("sam/alert", {
-	title: __("Alert Box", "sam-gutenberg"),
-	description: __("Un semplice alert box.", "sam-gutenberg"),
+export default registerBlockType("sam-gutenberg/alert-box", {
+	title: __("SAM Custom Alert Box", "sam-gutenberg"),
+	description: __(
+		"Semplice Alert Box che permette di mostrare un messaggio di chiarimento all'interno del contenuto.",
+		"sam-gutenberg"
+	),
 	category: "common",
 	icon: {
-		//   background: 'rgba(254, 243, 224, 0.52)',
 		src: icon
 	},
-	keywords: [
-		__("Alert", "sam-gutenberg"),
-		__("Message", "sam-gutenberg"),
-		__("Shout Out", "sam-gutenberg")
-	],
+	keywords: [__("SAM AB", "sam-gutenberg"), __("Alert Box", "sam-gutenberg")],
 	attributes: {
 		message: {
 			type: "array",
@@ -39,14 +36,33 @@ export default registerBlockType("sam/alert", {
 			source: "text",
 			selector: ".label"
 		},
-		colorPaletteControl: {
+		backgroundBoxColor: {
+			type: "string",
+			default: "#FFFFFF"
+		},
+		textBoxColor: {
 			type: "string",
 			default: "#000000"
+		},
+		mainColorAlert: {
+			type: "string",
+			default: "#FF0000"
+		},
+		labelColor: {
+			type: "string",
+			default: "#FFFFFF"
 		}
 	},
 	edit: props => {
 		const {
-			attributes: { message, label, colorPaletteControl },
+			attributes: {
+				message,
+				label,
+				backgroundBoxColor,
+				textBoxColor,
+				mainColorAlert,
+				labelColor
+			},
 			className,
 			setAttributes
 		} = props;
@@ -58,33 +74,77 @@ export default registerBlockType("sam/alert", {
 		};
 		return [
 			<InspectorControls>
-				<div>
-					<PanelColor
-						title={__("Colore Principale", "sam-gutenberg")}
-						colorValue={colorPaletteControl}
-					>
-						<ColorPalette
-							value={colorPaletteControl}
-							onChange={colorPaletteControl =>
-								setAttributes({ colorPaletteControl })
-							}
-						/>
-					</PanelColor>
-				</div>
+				<PanelColor
+					title={__("Colore Sfondo Box", "sam-gutenberg")}
+					colorValue={backgroundBoxColor}
+					initialOpen={false}
+				>
+					<ColorPalette
+						value={backgroundBoxColor}
+						onChange={backgroundBoxColor =>
+							setAttributes({ backgroundBoxColor })
+						}
+					/>
+				</PanelColor>
+				<PanelColor
+					title={__("Colore Testo Box", "sam-gutenberg")}
+					colorValue={textBoxColor}
+					initialOpen={false}
+				>
+					<ColorPalette
+						value={textBoxColor}
+						onChange={textBoxColor =>
+							setAttributes({ textBoxColor })
+						}
+					/>
+				</PanelColor>
+				<PanelColor
+					title={__("Colore Principale", "sam-gutenberg")}
+					colorValue={mainColorAlert}
+					initialOpen={false}
+				>
+					<ColorPalette
+						value={mainColorAlert}
+						onChange={mainColorAlert =>
+							setAttributes({ mainColorAlert })
+						}
+					/>
+				</PanelColor>
+				<PanelColor
+					title={__("Colore Label", "sam-gutenberg")}
+					colorValue={labelColor}
+					initialOpen={false}
+				>
+					<ColorPalette
+						value={labelColor}
+						onChange={labelColor => setAttributes({ labelColor })}
+					/>
+				</PanelColor>
 			</InspectorControls>,
-			<div className={className}>
-				<PlainText
+			<div
+				className={className}
+				style={{
+					backgroundColor: backgroundBoxColor,
+					borderColor: mainColorAlert
+				}}
+			>
+				<RichText
 					tagName="div"
 					className="label"
 					placeholder="Label"
+					style={{
+						color: labelColor,
+						backgroundColor: mainColorAlert
+					}}
 					onChange={onChangeLabel}
 					value={label}
 				/>
 				<RichText
 					tagName="div"
-					className="body-message"
+					className="message-body"
+					style={{ color: textBoxColor }}
 					multiline="p"
-					placeholder={__("Crea il tuo avviso...", "sam-gutenberg")}
+					placeholder={__("Add your custom message", "sam-gutenberg")}
 					onChange={onChangeMessage}
 					value={message}
 				/>
@@ -93,12 +153,36 @@ export default registerBlockType("sam/alert", {
 	},
 	save: props => {
 		const {
-			attributes: { message, label }
+			attributes: {
+				message,
+				label,
+				backgroundBoxColor,
+				textBoxColor,
+				mainColorAlert,
+				labelColor
+			},
+			className
 		} = props;
 		return (
-			<div class="info">
-				<span class="label">{label}</span>
-				<div class="message-body box-inside">{message}</div>
+			<div
+				className={className}
+				style={{
+					backgroundColor: backgroundBoxColor,
+					borderColor: mainColorAlert
+				}}
+			>
+				<span
+					class="label"
+					style={{
+						backgroundColor: mainColorAlert,
+						color: labelColor
+					}}
+				>
+					{label}
+				</span>
+				<div class="message-body" style={{ color: textBoxColor }}>
+					{message}
+				</div>
 			</div>
 		);
 	}
