@@ -28,3 +28,10 @@
 
 body:not(.wp-admin) .wp-block-sam-gutenberg-alert-box {
   margin: 20px 0; }
+.wp-block-sam-gutenberg-cta {
+  text-align: center; }
+  .wp-block-sam-gutenberg-cta .cta-btn {
+    position: static; }
+
+body:not(.wp-admin) .wp-block-sam-gutenberg-alert-box {
+  margin: 20px 0; }

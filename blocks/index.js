@@ -4,4 +4,4 @@ import "./i18n.js";
  * Import example blocks
  */
 import "./alerts";
-// import "./test-code";
+import "./cta";
