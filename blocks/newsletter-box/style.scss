@@ -1,0 +1,12 @@
+.wp-block-sam-gutenberg-cta {
+	text-align: center;
+	.cta-btn {
+		position: static;
+	}
+}
+
+body:not(.wp-admin) {
+	.wp-block-sam-gutenberg-alert-box {
+		margin: 20px 0;
+	}
+}
