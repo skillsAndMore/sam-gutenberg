@@ -42,19 +42,23 @@ export default registerBlockType("sam-gutenberg/cta", {
 		},
 		backgroundBoxColor: {
 			type: "string",
-			default: "#5e4352"
+			default: "#212121"
+		},
+		titleBoxColor: {
+			type: "string",
+			default: "#E0E0E0"
 		},
 		textBoxColor: {
 			type: "string",
-			default: "#dfbbb1"
+			default: "#E0E0E0"
 		},
 		buttonBackgroundColor: {
 			type: "string",
-			default: "#e43f6f"
+			default: "#d32f2f"
 		},
 		buttonTextColor: {
 			type: "string",
-			default: "#dfbbb1"
+			default: "#E0E0E0"
 		}
 	},
 	edit: props => {
@@ -64,6 +68,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 				ctaMessage,
 				btnMessage,
 				backgroundBoxColor,
+				titleBoxColor,
 				textBoxColor,
 				buttonBackgroundColor,
 				buttonTextColor
@@ -91,6 +96,18 @@ export default registerBlockType("sam-gutenberg/cta", {
 						value={backgroundBoxColor}
 						onChange={backgroundBoxColor =>
 							setAttributes({ backgroundBoxColor })
+						}
+					/>
+				</PanelColor>
+				<PanelColor //Colore Testo CTA
+					title={__("Colore Titolo CTA", "sam-gutenberg")}
+					colorValue={titleBoxColor}
+					initialOpen={false}
+				>
+					<ColorPalette
+						value={titleBoxColor}
+						onChange={titleBoxColor =>
+							setAttributes({ titleBoxColor })
 						}
 					/>
 				</PanelColor>
@@ -142,7 +159,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 					className="cta-title"
 					placeholder="Title"
 					style={{
-						color: textBoxColor
+						color: titleBoxColor
 					}}
 					onChange={onChangeTitle}
 					value={ctaTitle}
@@ -158,9 +175,9 @@ export default registerBlockType("sam-gutenberg/cta", {
 					onChange={onChangeMessage}
 					value={ctaMessage}
 				/>
-				<div class="cta-btn">
+				<div class="wrapper-cta-btn">
 					<RichText
-						tagName="span"
+						tagName="div"
 						className="cta-btn"
 						placeholder={__("Azione!", "sam-gutenberg")}
 						onChange={onChangeBtnText}
