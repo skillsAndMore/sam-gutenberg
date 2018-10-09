@@ -34,8 +34,8 @@ body:not(.wp-admin) .wp-block-sam-gutenberg-alert-box {
   .wp-block-sam-gutenberg-cta .cta-message,
   .wp-block-sam-gutenberg-cta .cta-btn {
     text-align: center; }
-  .wp-block-sam-gutenberg-cta .cta-message p {
-    color: #e0e0e0; }
+  .wp-block-sam-gutenberg-cta .cta-message {
+    margin-bottom: 20px; }
   .wp-block-sam-gutenberg-cta .wrapper-cta-btn {
     display: -ms-flexbox;
     display: flex;

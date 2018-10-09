@@ -32,8 +32,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 			selector: ".cta-title"
 		},
 		ctaMessage: {
-			type: "array",
-			source: "children",
+			source: "text",
 			selector: ".cta-message"
 		},
 		btnMessage: {
@@ -45,10 +44,6 @@ export default registerBlockType("sam-gutenberg/cta", {
 			default: "#212121"
 		},
 		titleBoxColor: {
-			type: "string",
-			default: "#E0E0E0"
-		},
-		textBoxColor: {
 			type: "string",
 			default: "#E0E0E0"
 		},
@@ -69,7 +64,6 @@ export default registerBlockType("sam-gutenberg/cta", {
 				btnMessage,
 				backgroundBoxColor,
 				titleBoxColor,
-				textBoxColor,
 				buttonBackgroundColor,
 				buttonTextColor
 			},
@@ -108,18 +102,6 @@ export default registerBlockType("sam-gutenberg/cta", {
 						value={titleBoxColor}
 						onChange={titleBoxColor =>
 							setAttributes({ titleBoxColor })
-						}
-					/>
-				</PanelColor>
-				<PanelColor //Colore Testo CTA
-					title={__("Colore Testo CTA", "sam-gutenberg")}
-					colorValue={textBoxColor}
-					initialOpen={false}
-				>
-					<ColorPalette
-						value={textBoxColor}
-						onChange={textBoxColor =>
-							setAttributes({ textBoxColor })
 						}
 					/>
 				</PanelColor>
@@ -165,12 +147,11 @@ export default registerBlockType("sam-gutenberg/cta", {
 					value={ctaTitle}
 				/>
 				<RichText
-					tagName="div"
+					tagName="p"
 					className="cta-message"
-					multiline="p"
 					placeholder={__("Aggiungi un messaggio", "sam-gutenberg")}
 					style={{
-						color: textBoxColor
+						color: titleBoxColor
 					}}
 					onChange={onChangeMessage}
 					value={ctaMessage}
@@ -197,9 +178,9 @@ export default registerBlockType("sam-gutenberg/cta", {
 				message,
 				label,
 				backgroundBoxColor,
-				textBoxColor,
 				mainColorAlert,
-				labelColor
+				labelColor,
+				titleBoxColor
 			},
 			className
 		} = props;
@@ -220,7 +201,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 				>
 					{label}
 				</span>
-				<div class="message-body" style={{ color: textBoxColor }}>
+				<div class="message-body" style={{ color: titleBoxColor }}>
 					{message}
 				</div>
 			</div>
