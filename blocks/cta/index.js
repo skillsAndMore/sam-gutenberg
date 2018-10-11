@@ -47,11 +47,11 @@ export default registerBlockType("sam-gutenberg/cta", {
 		},
 		backgroundBoxColor: {
 			type: "string",
-			default: "#212121"
+			default: "#333333"
 		},
-		titleBoxColor: {
+		textBoxColor: {
 			type: "string",
-			default: "#E0E0E0"
+			default: "#ffffff"
 		},
 		buttonBackgroundColor: {
 			type: "string",
@@ -80,7 +80,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 				ctaMessage,
 				btnMessage,
 				backgroundBoxColor,
-				titleBoxColor,
+				textBoxColor,
 				buttonBackgroundColor,
 				buttonTextColor,
 				borderBoxRadius,
@@ -130,7 +130,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 					initialOpen={false}
 				>
 					<TextControl
-						label={__("URL", "jsforwpblocks")}
+						label={__("URL", "sam-gutenberg")}
 						help={__(
 							"Inserisci la URL per il bottone",
 							"sam-gutenberg"
@@ -157,13 +157,13 @@ export default registerBlockType("sam-gutenberg/cta", {
 					</PanelColor>
 					<PanelColor //Colore Testo CTA
 						title={__("Colore Titolo CTA", "sam-gutenberg")}
-						colorValue={titleBoxColor}
+						colorValue={textBoxColor}
 						initialOpen={false}
 					>
 						<ColorPalette
-							value={titleBoxColor}
-							onChange={titleBoxColor =>
-								setAttributes({ titleBoxColor })
+							value={textBoxColor}
+							onChange={textBoxColor =>
+								setAttributes({ textBoxColor })
 							}
 						/>
 					</PanelColor>
@@ -205,7 +205,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 					className="cta-title"
 					placeholder="Title"
 					style={{
-						color: titleBoxColor
+						color: textBoxColor
 					}}
 					onChange={onChangeTitle}
 					value={ctaTitle}
@@ -215,7 +215,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 					className="cta-message"
 					placeholder={__("Aggiungi un messaggio", "sam-gutenberg")}
 					style={{
-						color: titleBoxColor
+						color: textBoxColor
 					}}
 					onChange={onChangeMessage}
 					value={ctaMessage}
@@ -244,7 +244,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 				ctaMessage,
 				btnMessage,
 				backgroundBoxColor,
-				titleBoxColor,
+				textBoxColor,
 				buttonBackgroundColor,
 				buttonTextColor,
 				borderBoxRadius,
@@ -258,13 +258,13 @@ export default registerBlockType("sam-gutenberg/cta", {
 				style={{
 					backgroundColor: backgroundBoxColor,
 					borderRadius: borderBoxRadius,
-					color: titleBoxColor
+					color: textBoxColor
 				}}
 			>
 				<h3
 					className="cta-title"
 					style={{
-						color: titleBoxColor
+						color: textBoxColor
 					}}
 				>
 					{ctaTitle}
@@ -274,7 +274,6 @@ export default registerBlockType("sam-gutenberg/cta", {
 					<a
 						className="cta-btn"
 						href={urlBtn}
-						title={btnMessage}
 						style={{
 							backgroundColor: buttonBackgroundColor,
 							color: buttonTextColor,
