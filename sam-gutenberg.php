@@ -10,7 +10,7 @@
  * Plugin Name: SAM Gutenberg Blocks
  * Plugin URI:  https://skillsandmore.org
  * Description: A plugin containing blocks for SkillsAndMore.
- * Version:     1.0.0
+ * Version:     0.2.0
  * Author:      Andrea Barghigiani
  * Author URI:  https://twitter.com/zgordon
  * Text Domain: sam-gutenberg
