@@ -51,3 +51,7 @@ body:not(.wp-admin) .wp-block-sam-gutenberg-alert-box {
 
 .components-panel__body .is-opened .components-panel__row label {
   max-width: 100%; }
+
+body:not(.wp-admin) .wp-block-sam-gutenberg-cta {
+  margin-bottom: 0.75em;
+  margin-top: 0.75em; }
