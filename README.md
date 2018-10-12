@@ -6,7 +6,7 @@ We'll be happy to see you contributing in this project as well and we're going t
 
 ## List of blocks
 - [x] [Alert Box](#alert-box)
-- [ ] Call to Action
+- [x] [Call to Action](#call-to-action)
 - [ ] Pros & Cons
 - [ ] Pricing Table
 - [ ] Codepen
