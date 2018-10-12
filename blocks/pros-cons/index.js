@@ -19,7 +19,7 @@ const TEMPLATE = [
 		[
 			[
 				"core/column",
-				{ className: "pro" },
+				{},
 				[
 					["core/image", { className: "pro-icon" }],
 					[
@@ -31,7 +31,7 @@ const TEMPLATE = [
 			],
 			[
 				"core/column",
-				{ className: "cons" },
+				{},
 				[
 					["core/image", { className: "cons-icon" }],
 					[
