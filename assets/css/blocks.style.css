@@ -29,18 +29,22 @@
 body:not(.wp-admin) .wp-block-sam-gutenberg-alert-box {
   margin: 20px 0; }
 .wp-block-sam-gutenberg-cta {
-  padding: 10px 20px; }
+  padding: 30px 40px; }
   .wp-block-sam-gutenberg-cta .cta-title,
   .wp-block-sam-gutenberg-cta .cta-message,
   .wp-block-sam-gutenberg-cta .cta-btn {
     text-align: center; }
+  .wp-block-sam-gutenberg-cta .cta-title {
+    font-size: 2.4rem;
+    font-size: 24px; }
   .wp-block-sam-gutenberg-cta .cta-message {
-    margin-bottom: 20px; }
+    margin-bottom: 0.75em; }
   .wp-block-sam-gutenberg-cta .wrapper-cta-btn {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+    margin-bottom: 0.75em; }
   .wp-block-sam-gutenberg-cta .cta-btn {
     display: inline-block;
     padding: 6px 12px; }

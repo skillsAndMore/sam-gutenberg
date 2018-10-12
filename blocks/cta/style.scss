@@ -1,16 +1,21 @@
 .wp-block-sam-gutenberg-cta {
-	padding: 10px 20px;
+	padding: 30px 40px;
 	.cta-title,
 	.cta-message,
 	.cta-btn {
 		text-align: center;
 	}
+	.cta-title {
+		font-size: 2.4rem;
+		font-size: 24px;
+	}
 	.cta-message {
-		margin-bottom: 20px;
+		margin-bottom: 0.75em;
 	}
 	.wrapper-cta-btn {
 		display: flex;
 		justify-content: center;
+		margin-bottom: 0.75em;
 	}
 
 	.cta-btn {
@@ -25,6 +30,5 @@
 
 body:not(.wp-admin) {
 	.wp-block-sam-gutenberg-cta {
-		
 	}
 }

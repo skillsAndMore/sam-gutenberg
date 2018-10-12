@@ -197,7 +197,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 				className={className}
 				style={{
 					backgroundColor: backgroundBoxColor,
-					borderRadius: borderBoxRadius
+					borderRadius: `${borderBoxRadius}px`
 				}}
 			>
 				<RichText
@@ -229,7 +229,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 						style={{
 							backgroundColor: buttonBackgroundColor,
 							color: buttonTextColor,
-							borderRadius: borderBoxRadius
+							borderRadius: `${borderBoxRadius}px`
 						}}
 						value={btnMessage}
 					/>
@@ -257,18 +257,18 @@ export default registerBlockType("sam-gutenberg/cta", {
 				className={className}
 				style={{
 					backgroundColor: backgroundBoxColor,
-					borderRadius: borderBoxRadius,
+					borderRadius: `${borderBoxRadius}px`,
 					color: textBoxColor
 				}}
 			>
-				<h3
+				<h2
 					className="cta-title"
 					style={{
 						color: textBoxColor
 					}}
 				>
 					{ctaTitle}
-				</h3>
+				</h2>
 				<p className="cta-message">{ctaMessage}</p>
 				<div className="wrapper-cta-btn">
 					<a
@@ -277,7 +277,7 @@ export default registerBlockType("sam-gutenberg/cta", {
 						style={{
 							backgroundColor: buttonBackgroundColor,
 							color: buttonTextColor,
-							borderRadius: borderBoxRadius
+							borderRadius: `${borderBoxRadius}px`
 						}}
 					>
 						{btnMessage}
