@@ -26,6 +26,20 @@ The alert box is a useful element for any article. This kind of block lets you i
 * box background color
 * text color
 * label background color
-* label color
+* label text color
 
 For the moment i comes only with one style where we move the alert label to the left of the message but if you need more feel free to ask for them in the issue section.
+
+## Call To Action
+
+![Call To Action](images/repository/cta-block.jpg)
+
+Have a call to action is essential to most businesess and with this block you can add this useful information in any page of your website. The Call To Action block comes with the following settings:
+* box background color
+* text color
+* button background color
+* button text color
+* rounded corners (it applies to both the box and the button)
+* URL field to insert 
+
+These are the settings available from the first release of the block, please add your needs in [this issue](https://github.com/skillsAndMore/sam-gutenberg/issues/11).
