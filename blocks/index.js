@@ -5,3 +5,4 @@ import "./i18n.js";
  */
 import "./alerts";
 import "./cta";
+import "./pros-cons";

@@ -55,3 +55,8 @@ body:not(.wp-admin) .wp-block-sam-gutenberg-alert-box {
 body:not(.wp-admin) .wp-block-sam-gutenberg-cta {
   margin-bottom: 0.75em;
   margin-top: 0.75em; }
+.wp-block-sam-gutenberg-pros-cons .pro {
+  background-color: #0f0; }
+
+.wp-block-sam-gutenberg-pros-cons .cons {
+  background-color: #f00; }
